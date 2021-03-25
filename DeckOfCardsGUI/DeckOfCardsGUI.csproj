@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net5.0-windows</TargetFramework>
+        <UseWPF>true</UseWPF>
+
+        <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+        <PublishSingleFile>true</PublishSingleFile>
+        
+        <PublishTrimmed>true</PublishTrimmed>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DeckOfCardsAPI\DeckOfCardsAPI.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Fonts\JetBrainsMono-Regular.ttf" />
+      <Resource Include="Fonts\JetBrainsMono-Regular.ttf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="dist\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="dist\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="dist\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Remove="dist\**" />
+    </ItemGroup>
+
+</Project>
