@@ -7,8 +7,6 @@
 
         <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
         <PublishSingleFile>true</PublishSingleFile>
-        
-        <PublishTrimmed>true</PublishTrimmed>
     </PropertyGroup>
 
     <ItemGroup>

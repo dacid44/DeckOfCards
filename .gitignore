@@ -135,3 +135,4 @@ _NCrunch*
 
 # My additional stuff
 dist/
+dist.*
