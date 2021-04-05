@@ -57,13 +57,7 @@ namespace DeckOfCardsXamarin.Android
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.EnterFromRight = global::DeckOfCardsXamarin.Android.Resource.Animation.EnterFromRight;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.ExitToLeft = global::DeckOfCardsXamarin.Android.Resource.Animation.ExitToLeft;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.ExitToRight = global::DeckOfCardsXamarin.Android.Resource.Animation.ExitToRight;
-			global::Xamarin.Forms.Platform.Android.Resource.Animation.fragment_close_enter = global::DeckOfCardsXamarin.Android.Resource.Animation.fragment_close_enter;
-			global::Xamarin.Forms.Platform.Android.Resource.Animation.fragment_close_exit = global::DeckOfCardsXamarin.Android.Resource.Animation.fragment_close_exit;
-			global::Xamarin.Forms.Platform.Android.Resource.Animation.fragment_fade_enter = global::DeckOfCardsXamarin.Android.Resource.Animation.fragment_fade_enter;
-			global::Xamarin.Forms.Platform.Android.Resource.Animation.fragment_fade_exit = global::DeckOfCardsXamarin.Android.Resource.Animation.fragment_fade_exit;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.fragment_fast_out_extra_slow_in = global::DeckOfCardsXamarin.Android.Resource.Animation.fragment_fast_out_extra_slow_in;
-			global::Xamarin.Forms.Platform.Android.Resource.Animation.fragment_open_enter = global::DeckOfCardsXamarin.Android.Resource.Animation.fragment_open_enter;
-			global::Xamarin.Forms.Platform.Android.Resource.Animation.fragment_open_exit = global::DeckOfCardsXamarin.Android.Resource.Animation.fragment_open_exit;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.mtrl_bottom_sheet_slide_in = global::DeckOfCardsXamarin.Android.Resource.Animation.mtrl_bottom_sheet_slide_in;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.mtrl_bottom_sheet_slide_out = global::DeckOfCardsXamarin.Android.Resource.Animation.mtrl_bottom_sheet_slide_out;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.mtrl_card_lowers_interpolator = global::DeckOfCardsXamarin.Android.Resource.Animation.mtrl_card_lowers_interpolator;
@@ -3682,13 +3676,7 @@ namespace DeckOfCardsXamarin.Android
 			global::Xamarin.Forms.Platform.Resource.Animation.EnterFromRight = global::DeckOfCardsXamarin.Android.Resource.Animation.EnterFromRight;
 			global::Xamarin.Forms.Platform.Resource.Animation.ExitToLeft = global::DeckOfCardsXamarin.Android.Resource.Animation.ExitToLeft;
 			global::Xamarin.Forms.Platform.Resource.Animation.ExitToRight = global::DeckOfCardsXamarin.Android.Resource.Animation.ExitToRight;
-			global::Xamarin.Forms.Platform.Resource.Animation.fragment_close_enter = global::DeckOfCardsXamarin.Android.Resource.Animation.fragment_close_enter;
-			global::Xamarin.Forms.Platform.Resource.Animation.fragment_close_exit = global::DeckOfCardsXamarin.Android.Resource.Animation.fragment_close_exit;
-			global::Xamarin.Forms.Platform.Resource.Animation.fragment_fade_enter = global::DeckOfCardsXamarin.Android.Resource.Animation.fragment_fade_enter;
-			global::Xamarin.Forms.Platform.Resource.Animation.fragment_fade_exit = global::DeckOfCardsXamarin.Android.Resource.Animation.fragment_fade_exit;
 			global::Xamarin.Forms.Platform.Resource.Animation.fragment_fast_out_extra_slow_in = global::DeckOfCardsXamarin.Android.Resource.Animation.fragment_fast_out_extra_slow_in;
-			global::Xamarin.Forms.Platform.Resource.Animation.fragment_open_enter = global::DeckOfCardsXamarin.Android.Resource.Animation.fragment_open_enter;
-			global::Xamarin.Forms.Platform.Resource.Animation.fragment_open_exit = global::DeckOfCardsXamarin.Android.Resource.Animation.fragment_open_exit;
 			global::Xamarin.Forms.Platform.Resource.Animation.mtrl_bottom_sheet_slide_in = global::DeckOfCardsXamarin.Android.Resource.Animation.mtrl_bottom_sheet_slide_in;
 			global::Xamarin.Forms.Platform.Resource.Animation.mtrl_bottom_sheet_slide_out = global::DeckOfCardsXamarin.Android.Resource.Animation.mtrl_bottom_sheet_slide_out;
 			global::Xamarin.Forms.Platform.Resource.Animation.mtrl_card_lowers_interpolator = global::DeckOfCardsXamarin.Android.Resource.Animation.mtrl_card_lowers_interpolator;
@@ -7377,34 +7365,16 @@ namespace DeckOfCardsXamarin.Android
 			public const int ExitToRight = 2130771999;
 			
 			// aapt resource value: 0x7F010020
-			public const int fragment_close_enter = 2130772000;
+			public const int fragment_fast_out_extra_slow_in = 2130772000;
 			
 			// aapt resource value: 0x7F010021
-			public const int fragment_close_exit = 2130772001;
+			public const int mtrl_bottom_sheet_slide_in = 2130772001;
 			
 			// aapt resource value: 0x7F010022
-			public const int fragment_fade_enter = 2130772002;
+			public const int mtrl_bottom_sheet_slide_out = 2130772002;
 			
 			// aapt resource value: 0x7F010023
-			public const int fragment_fade_exit = 2130772003;
-			
-			// aapt resource value: 0x7F010024
-			public const int fragment_fast_out_extra_slow_in = 2130772004;
-			
-			// aapt resource value: 0x7F010025
-			public const int fragment_open_enter = 2130772005;
-			
-			// aapt resource value: 0x7F010026
-			public const int fragment_open_exit = 2130772006;
-			
-			// aapt resource value: 0x7F010027
-			public const int mtrl_bottom_sheet_slide_in = 2130772007;
-			
-			// aapt resource value: 0x7F010028
-			public const int mtrl_bottom_sheet_slide_out = 2130772008;
-			
-			// aapt resource value: 0x7F010029
-			public const int mtrl_card_lowers_interpolator = 2130772009;
+			public const int mtrl_card_lowers_interpolator = 2130772003;
 			
 			static Animation()
 			{
@@ -7429,40 +7399,58 @@ namespace DeckOfCardsXamarin.Android
 			public const int design_fab_show_motion_spec = 2130837506;
 			
 			// aapt resource value: 0x7F020003
-			public const int mtrl_btn_state_list_anim = 2130837507;
+			public const int fragment_close_enter = 2130837507;
 			
 			// aapt resource value: 0x7F020004
-			public const int mtrl_btn_unelevated_state_list_anim = 2130837508;
+			public const int fragment_close_exit = 2130837508;
 			
 			// aapt resource value: 0x7F020005
-			public const int mtrl_card_state_list_anim = 2130837509;
+			public const int fragment_fade_enter = 2130837509;
 			
 			// aapt resource value: 0x7F020006
-			public const int mtrl_chip_state_list_anim = 2130837510;
+			public const int fragment_fade_exit = 2130837510;
 			
 			// aapt resource value: 0x7F020007
-			public const int mtrl_extended_fab_change_size_motion_spec = 2130837511;
+			public const int fragment_open_enter = 2130837511;
 			
 			// aapt resource value: 0x7F020008
-			public const int mtrl_extended_fab_hide_motion_spec = 2130837512;
+			public const int fragment_open_exit = 2130837512;
 			
 			// aapt resource value: 0x7F020009
-			public const int mtrl_extended_fab_show_motion_spec = 2130837513;
+			public const int mtrl_btn_state_list_anim = 2130837513;
 			
 			// aapt resource value: 0x7F02000A
-			public const int mtrl_extended_fab_state_list_animator = 2130837514;
+			public const int mtrl_btn_unelevated_state_list_anim = 2130837514;
 			
 			// aapt resource value: 0x7F02000B
-			public const int mtrl_fab_hide_motion_spec = 2130837515;
+			public const int mtrl_card_state_list_anim = 2130837515;
 			
 			// aapt resource value: 0x7F02000C
-			public const int mtrl_fab_show_motion_spec = 2130837516;
+			public const int mtrl_chip_state_list_anim = 2130837516;
 			
 			// aapt resource value: 0x7F02000D
-			public const int mtrl_fab_transformation_sheet_collapse_spec = 2130837517;
+			public const int mtrl_extended_fab_change_size_motion_spec = 2130837517;
 			
 			// aapt resource value: 0x7F02000E
-			public const int mtrl_fab_transformation_sheet_expand_spec = 2130837518;
+			public const int mtrl_extended_fab_hide_motion_spec = 2130837518;
+			
+			// aapt resource value: 0x7F02000F
+			public const int mtrl_extended_fab_show_motion_spec = 2130837519;
+			
+			// aapt resource value: 0x7F020010
+			public const int mtrl_extended_fab_state_list_animator = 2130837520;
+			
+			// aapt resource value: 0x7F020011
+			public const int mtrl_fab_hide_motion_spec = 2130837521;
+			
+			// aapt resource value: 0x7F020012
+			public const int mtrl_fab_show_motion_spec = 2130837522;
+			
+			// aapt resource value: 0x7F020013
+			public const int mtrl_fab_transformation_sheet_collapse_spec = 2130837523;
+			
+			// aapt resource value: 0x7F020014
+			public const int mtrl_fab_transformation_sheet_expand_spec = 2130837524;
 			
 			static Animator()
 			{
@@ -13306,136 +13294,139 @@ namespace DeckOfCardsXamarin.Android
 			public const int spacer = 2131231027;
 			
 			// aapt resource value: 0x7F080134
-			public const int split_action_bar = 2131231028;
+			public const int special_effects_controller_view_tag = 2131231028;
 			
 			// aapt resource value: 0x7F080135
-			public const int src_atop = 2131231029;
+			public const int split_action_bar = 2131231029;
 			
 			// aapt resource value: 0x7F080136
-			public const int src_in = 2131231030;
+			public const int src_atop = 2131231030;
 			
 			// aapt resource value: 0x7F080137
-			public const int src_over = 2131231031;
+			public const int src_in = 2131231031;
 			
 			// aapt resource value: 0x7F080138
-			public const int start = 2131231032;
+			public const int src_over = 2131231032;
 			
 			// aapt resource value: 0x7F080139
-			public const int status_bar_latest_event_content = 2131231033;
+			public const int start = 2131231033;
 			
 			// aapt resource value: 0x7F08013A
-			public const int stretch = 2131231034;
+			public const int status_bar_latest_event_content = 2131231034;
 			
 			// aapt resource value: 0x7F08013B
-			public const int submenuarrow = 2131231035;
+			public const int stretch = 2131231035;
 			
 			// aapt resource value: 0x7F08013C
-			public const int submit_area = 2131231036;
+			public const int submenuarrow = 2131231036;
+			
+			// aapt resource value: 0x7F08013D
+			public const int submit_area = 2131231037;
 			
 			// aapt resource value: 0x7F080007
 			public const int SYM = 2131230727;
 			
-			// aapt resource value: 0x7F08013D
-			public const int tabMode = 2131231037;
-			
 			// aapt resource value: 0x7F08013E
-			public const int tag_accessibility_actions = 2131231038;
+			public const int tabMode = 2131231038;
 			
 			// aapt resource value: 0x7F08013F
-			public const int tag_accessibility_clickable_spans = 2131231039;
+			public const int tag_accessibility_actions = 2131231039;
 			
 			// aapt resource value: 0x7F080140
-			public const int tag_accessibility_heading = 2131231040;
+			public const int tag_accessibility_clickable_spans = 2131231040;
 			
 			// aapt resource value: 0x7F080141
-			public const int tag_accessibility_pane_title = 2131231041;
+			public const int tag_accessibility_heading = 2131231041;
 			
 			// aapt resource value: 0x7F080142
-			public const int tag_screen_reader_focusable = 2131231042;
+			public const int tag_accessibility_pane_title = 2131231042;
 			
 			// aapt resource value: 0x7F080143
-			public const int tag_transition_group = 2131231043;
+			public const int tag_screen_reader_focusable = 2131231043;
 			
 			// aapt resource value: 0x7F080144
-			public const int tag_unhandled_key_event_manager = 2131231044;
+			public const int tag_transition_group = 2131231044;
 			
 			// aapt resource value: 0x7F080145
-			public const int tag_unhandled_key_listeners = 2131231045;
+			public const int tag_unhandled_key_event_manager = 2131231045;
 			
 			// aapt resource value: 0x7F080146
-			public const int test_checkbox_android_button_tint = 2131231046;
+			public const int tag_unhandled_key_listeners = 2131231046;
 			
 			// aapt resource value: 0x7F080147
-			public const int test_checkbox_app_button_tint = 2131231047;
+			public const int test_checkbox_android_button_tint = 2131231047;
 			
 			// aapt resource value: 0x7F080148
-			public const int test_radiobutton_android_button_tint = 2131231048;
+			public const int test_checkbox_app_button_tint = 2131231048;
 			
 			// aapt resource value: 0x7F080149
-			public const int test_radiobutton_app_button_tint = 2131231049;
+			public const int test_radiobutton_android_button_tint = 2131231049;
 			
 			// aapt resource value: 0x7F08014A
-			public const int text = 2131231050;
+			public const int test_radiobutton_app_button_tint = 2131231050;
 			
 			// aapt resource value: 0x7F08014B
-			public const int text2 = 2131231051;
+			public const int text = 2131231051;
 			
 			// aapt resource value: 0x7F08014C
-			public const int textEnd = 2131231052;
-			
-			// aapt resource value: 0x7F080152
-			public const int textinput_counter = 2131231058;
-			
-			// aapt resource value: 0x7F080153
-			public const int textinput_error = 2131231059;
-			
-			// aapt resource value: 0x7F080154
-			public const int textinput_helper_text = 2131231060;
-			
-			// aapt resource value: 0x7F080155
-			public const int textinput_placeholder = 2131231061;
-			
-			// aapt resource value: 0x7F080156
-			public const int textinput_prefix_text = 2131231062;
-			
-			// aapt resource value: 0x7F080157
-			public const int textinput_suffix_text = 2131231063;
+			public const int text2 = 2131231052;
 			
 			// aapt resource value: 0x7F08014D
-			public const int textSpacerNoButtons = 2131231053;
+			public const int textEnd = 2131231053;
 			
-			// aapt resource value: 0x7F08014E
-			public const int textSpacerNoTitle = 2131231054;
+			// aapt resource value: 0x7F080153
+			public const int textinput_counter = 2131231059;
 			
-			// aapt resource value: 0x7F08014F
-			public const int textStart = 2131231055;
+			// aapt resource value: 0x7F080154
+			public const int textinput_error = 2131231060;
 			
-			// aapt resource value: 0x7F080150
-			public const int text_input_end_icon = 2131231056;
+			// aapt resource value: 0x7F080155
+			public const int textinput_helper_text = 2131231061;
 			
-			// aapt resource value: 0x7F080151
-			public const int text_input_start_icon = 2131231057;
+			// aapt resource value: 0x7F080156
+			public const int textinput_placeholder = 2131231062;
+			
+			// aapt resource value: 0x7F080157
+			public const int textinput_prefix_text = 2131231063;
 			
 			// aapt resource value: 0x7F080158
-			public const int time = 2131231064;
+			public const int textinput_suffix_text = 2131231064;
+			
+			// aapt resource value: 0x7F08014E
+			public const int textSpacerNoButtons = 2131231054;
+			
+			// aapt resource value: 0x7F08014F
+			public const int textSpacerNoTitle = 2131231055;
+			
+			// aapt resource value: 0x7F080150
+			public const int textStart = 2131231056;
+			
+			// aapt resource value: 0x7F080151
+			public const int text_input_end_icon = 2131231057;
+			
+			// aapt resource value: 0x7F080152
+			public const int text_input_start_icon = 2131231058;
 			
 			// aapt resource value: 0x7F080159
-			public const int title = 2131231065;
+			public const int time = 2131231065;
 			
 			// aapt resource value: 0x7F08015A
-			public const int titleDividerNoCustom = 2131231066;
+			public const int title = 2131231066;
 			
 			// aapt resource value: 0x7F08015B
-			public const int title_template = 2131231067;
+			public const int titleDividerNoCustom = 2131231067;
 			
 			// aapt resource value: 0x7F08015C
-			public const int toolbar = 2131231068;
+			public const int title_template = 2131231068;
 			
 			// aapt resource value: 0x7F08015D
-			public const int top = 2131231069;
+			public const int toolbar = 2131231069;
 			
 			// aapt resource value: 0x7F08015E
-			public const int topPanel = 2131231070;
+			public const int top = 2131231070;
+			
+			// aapt resource value: 0x7F08015F
+			public const int topPanel = 2131231071;
 			
 			// aapt resource value: 0x7F080008
 			public const int TOP_END = 2131230728;
@@ -13443,71 +13434,71 @@ namespace DeckOfCardsXamarin.Android
 			// aapt resource value: 0x7F080009
 			public const int TOP_START = 2131230729;
 			
-			// aapt resource value: 0x7F08015F
-			public const int touch_outside = 2131231071;
-			
 			// aapt resource value: 0x7F080160
-			public const int transition_current_scene = 2131231072;
+			public const int touch_outside = 2131231072;
 			
 			// aapt resource value: 0x7F080161
-			public const int transition_layout_save = 2131231073;
+			public const int transition_current_scene = 2131231073;
 			
 			// aapt resource value: 0x7F080162
-			public const int transition_position = 2131231074;
+			public const int transition_layout_save = 2131231074;
 			
 			// aapt resource value: 0x7F080163
-			public const int transition_scene_layoutid_cache = 2131231075;
+			public const int transition_position = 2131231075;
 			
 			// aapt resource value: 0x7F080164
-			public const int transition_transform = 2131231076;
+			public const int transition_scene_layoutid_cache = 2131231076;
 			
 			// aapt resource value: 0x7F080165
-			public const int @unchecked = 2131231077;
+			public const int transition_transform = 2131231077;
 			
 			// aapt resource value: 0x7F080166
-			public const int uniform = 2131231078;
+			public const int @unchecked = 2131231078;
 			
 			// aapt resource value: 0x7F080167
-			public const int unlabeled = 2131231079;
+			public const int uniform = 2131231079;
 			
 			// aapt resource value: 0x7F080168
-			public const int up = 2131231080;
+			public const int unlabeled = 2131231080;
 			
 			// aapt resource value: 0x7F080169
-			public const int useLogo = 2131231081;
+			public const int up = 2131231081;
 			
 			// aapt resource value: 0x7F08016A
-			public const int view_offset_helper = 2131231082;
+			public const int useLogo = 2131231082;
 			
 			// aapt resource value: 0x7F08016B
-			public const int view_tree_lifecycle_owner = 2131231083;
+			public const int view_offset_helper = 2131231083;
 			
 			// aapt resource value: 0x7F08016C
-			public const int view_tree_saved_state_registry_owner = 2131231084;
+			public const int view_tree_lifecycle_owner = 2131231084;
 			
 			// aapt resource value: 0x7F08016D
-			public const int view_tree_view_model_store_owner = 2131231085;
+			public const int view_tree_saved_state_registry_owner = 2131231085;
 			
 			// aapt resource value: 0x7F08016E
-			public const int visible = 2131231086;
+			public const int view_tree_view_model_store_owner = 2131231086;
 			
 			// aapt resource value: 0x7F08016F
-			public const int visible_removing_fragment_view_tag = 2131231087;
+			public const int visible = 2131231087;
 			
 			// aapt resource value: 0x7F080170
-			public const int volume_item_container = 2131231088;
-			
-			// aapt resource value: 0x7F080172
-			public const int withinBounds = 2131231090;
+			public const int visible_removing_fragment_view_tag = 2131231088;
 			
 			// aapt resource value: 0x7F080171
-			public const int withText = 2131231089;
+			public const int volume_item_container = 2131231089;
 			
 			// aapt resource value: 0x7F080173
-			public const int wrap_content = 2131231091;
+			public const int withinBounds = 2131231091;
+			
+			// aapt resource value: 0x7F080172
+			public const int withText = 2131231090;
 			
 			// aapt resource value: 0x7F080174
-			public const int zero_corner_chip = 2131231092;
+			public const int wrap_content = 2131231092;
+			
+			// aapt resource value: 0x7F080175
+			public const int zero_corner_chip = 2131231093;
 			
 			static Id()
 			{

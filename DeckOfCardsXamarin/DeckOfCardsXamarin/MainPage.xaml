@@ -7,8 +7,8 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         
         <Frame BackgroundColor="Black" Padding="15">
@@ -21,7 +21,7 @@
         <Grid Grid.Row="1" Padding="5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             
             <Label x:Name="MessageField"
@@ -31,14 +31,18 @@
                    HorizontalTextAlignment="End"/>
         </Grid>
     
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="2" Padding="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="80"/>
                 <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-        
+            
+            
             <Entry x:Name="NumCards"
                    FontFamily="JetBrainsMono"
                    HorizontalTextAlignment="Center"

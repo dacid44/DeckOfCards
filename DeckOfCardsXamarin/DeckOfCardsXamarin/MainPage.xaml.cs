@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace DeckOfCardsXamarin {
@@ -21,7 +18,7 @@ namespace DeckOfCardsXamarin {
             MessageField.Text = _deck.ErrorMessage;
          }
       }
-      
+
       private void OnDrawInputChanged(object sender, TextChangedEventArgs e) {
          if (NumCards.Text.Length >= 4 || _numerals.IsMatch(e.NewTextValue)) {
             ((Entry) sender).Text = e.OldTextValue;
@@ -29,7 +26,8 @@ namespace DeckOfCardsXamarin {
       }
       
       private void DrawEvent(object sender, EventArgs e) {
-         List<Card> drawnCards = _deck.Draw(int.Parse(NumCards.Text == "" ? "0" : NumCards.Text));
+         List<Card> drawnCards = _deck.Draw(int.Parse(
+            NumCards.Text is null || NumCards.Text == "" ? "0" : NumCards.Text));
          if (drawnCards is null) {
             MessageField.Text = _deck.ErrorMessage;
             return;
@@ -72,15 +70,33 @@ namespace DeckOfCardsXamarin {
             Grid row = new Grid();
             Grid.SetRow(row, i);
             CardGrid.Children.Add(row);
+            
+            int centeringOffset = (cardsPerRow - numCards) / 2;
+            if (numCards % 2 == cardsPerRow % 2) {
+               for (int j = 0; j < cardsPerRow; j++) {
+                  row.ColumnDefinitions.Add(new ColumnDefinition());
+               }
+            } else {
+               centeringOffset += 1;
+               for (int j = 0; j <= cardsPerRow; j++) {
+                  ColumnDefinition cd = new ColumnDefinition();
+                  if (j == 0 || j == cardsPerRow) {
+                     cd.Width = GridLength.Star;
+                  } else {
+                     cd.Width = new GridLength(2, GridUnitType.Star);
+                  }
+                  row.ColumnDefinitions.Add(cd);
+               }
+            }
+            
             for (int j = 0; j < numCards; j++) {
-               row.ColumnDefinitions.Add(new ColumnDefinition());
                Image img = new Image();
                img.Source = new UriImageSource {
                   Uri = new Uri(cards[i * cardsPerRow + j].PngImage, UriKind.Absolute),
                   CachingEnabled = true,
                   CacheValidity = new TimeSpan(0, 30, 0)
                };
-               Grid.SetColumn(img, j);
+               Grid.SetColumn(img, j + centeringOffset);
                row.Children.Add(img);
             }
          }
