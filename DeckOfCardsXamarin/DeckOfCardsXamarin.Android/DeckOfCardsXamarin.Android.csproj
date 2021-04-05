@@ -74,6 +74,10 @@
         <AndroidResource Include="Resources\layout\Toolbar.axml" />
         <AndroidResource Include="Resources\values\styles.xml" />
         <AndroidResource Include="Resources\values\colors.xml" />
+        
+        <AndroidResource Include="Resources\values\ic_cards_background.xml"/>
+        <AndroidResource Include="Resources\mipmap-*\ic_cards*"/>
+        <AndroidResource Include="Resources\drawable\ic_cards*"/>
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\DeckOfCardsXamarin\DeckOfCardsXamarin.csproj">
