@@ -64,6 +64,9 @@ namespace DeckOfCardsXamarin {
          int rows = 0;
          for (; rows * CalcMaxCardRow(rows) < cards.Count; rows++) { }
          int cardsPerRow = CalcMaxCardRow(rows);
+         if (cardsPerRow > cards.Count) {
+            cardsPerRow = cards.Count;
+         }
          while (rows > 0 && cards.Count - cardsPerRow * (rows - 1) <= 0) {
             rows--;
          }
