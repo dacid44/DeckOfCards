@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeckOfCardsXamarin.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        
+        <Frame BackgroundColor="Black" Padding="15">
+            <Frame BackgroundColor="DarkGreen" Padding="10">
+                <Grid x:Name="CardGrid">
+                </Grid>
+            </Frame>
+        </Frame>
+    
+        <Grid Grid.Row="1" Padding="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            
+            <Label x:Name="MessageField"
+                   FontFamily="JetBrainsMono" FontSize="16"/>
+            <Label x:Name="DeckIDField" Grid.Column="1"
+                   FontFamily="JetBrainsMono" FontSize="16"
+                   HorizontalTextAlignment="End"/>
+        </Grid>
+    
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        
+            <Entry x:Name="NumCards"
+                   FontFamily="JetBrainsMono"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Numeric" TextChanged="OnDrawInputChanged"/>
+            <Button Grid.Column="1" Text="Draw Cards" FontFamily="JetBrainsMono" Clicked="DrawEvent"/>
+            <Button Grid.Column="2" Text="Shuffle Cards" FontFamily="JetBrainsMono" Clicked="ShuffleEvent"/>
+            <Button Grid.Column="3" Text="List Cards" FontFamily="JetBrainsMono" Clicked="ListEvent"/>
+        </Grid>
+    </Grid>
+</ContentPage>
