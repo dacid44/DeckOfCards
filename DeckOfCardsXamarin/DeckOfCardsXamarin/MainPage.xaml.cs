@@ -37,13 +37,17 @@ namespace DeckOfCardsXamarin {
       }
 
       private void ShuffleEvent(object sender, EventArgs e) {
-         bool success = _deck.Shuffle();
-         if (!success) {
-            MessageField.Text = _deck.ErrorMessage;
-            return;
+         try {
+            bool success = _deck.Shuffle();
+            if (!success) {
+               MessageField.Text = _deck.ErrorMessage;
+               return;
+            }
+            DisplayCards(new List<Card>());
+            MessageField.Text = $"Shuffled the deck, {_deck.CardsRemaining} cards remaining.";
+         } catch (Exception ex) {
+            MessageField.Text = ex.ToString();
          }
-         DisplayCards(new List<Card>());
-         MessageField.Text = $"Shuffled the deck, {_deck.CardsRemaining} cards remaining.";
       }
 
       private void ListEvent(object sender, EventArgs e) {
@@ -60,12 +64,16 @@ namespace DeckOfCardsXamarin {
          int rows = 0;
          for (; rows * CalcMaxCardRow(rows) < cards.Count; rows++) { }
          int cardsPerRow = CalcMaxCardRow(rows);
+         while (rows > 0 && cards.Count - cardsPerRow * (rows - 1) <= 0) {
+            rows--;
+         }
+         cardsPerRow = CalcDistributedCardRow(cards.Count, cardsPerRow, rows);
          
          CardGrid.RowDefinitions.Clear();
          CardGrid.Children.Clear();
          for (int i = 0; i < rows; i++) {
             int numCards = Math.Min(cardsPerRow, cards.Count - (i * cardsPerRow));
-            if (numCards <= 0) { break; }
+            //if (numCards <= 0) { break; }
             CardGrid.RowDefinitions.Add(new RowDefinition());
             Grid row = new Grid();
             Grid.SetRow(row, i);
@@ -77,7 +85,7 @@ namespace DeckOfCardsXamarin {
                   row.ColumnDefinitions.Add(new ColumnDefinition());
                }
             } else {
-               centeringOffset += 1;
+               centeringOffset++;
                for (int j = 0; j <= cardsPerRow; j++) {
                   ColumnDefinition cd = new ColumnDefinition();
                   if (j == 0 || j == cardsPerRow) {
@@ -107,6 +115,16 @@ namespace DeckOfCardsXamarin {
          double gridWidth = CardGrid.Width;
          double gridHeight = CardGrid.Height;
          return (int) Math.Floor(gridWidth / (gridHeight / rows) * (4 / 3.0));
+      }
+
+      private static int CalcDistributedCardRow(int cards, int maxCardRow, int rows) {
+         if (rows <= 1) {
+            return maxCardRow;
+         }
+         int lastRow = cards - maxCardRow * (rows - 1);
+         int toMove = 0;
+         for (; maxCardRow - (toMove + 1) >= lastRow + (toMove + 1) * (rows - 1); toMove++) { }
+         return maxCardRow - toMove;
       }
    }
 }

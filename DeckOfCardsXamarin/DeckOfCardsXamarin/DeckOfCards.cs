@@ -117,6 +117,7 @@ namespace DeckOfCardsXamarin {
       public JsonResponse(string url) {
          WebRequest request = WebRequest.Create(url);
          request.ContentType = "Application/JSON";
+         request.Timeout = 5000;
          var response = (HttpWebResponse) request.GetResponse();
          var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
          Json = JObject.Parse(responseString);
